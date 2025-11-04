@@ -1,7 +1,8 @@
 # FHEVM Hardhat Template
 
-A Hardhat-based template for developing Fully Homomorphic Encryption (FHE) enabled Solidity smart contracts using the
-FHEVM protocol by Zama.
+This projects is built by using the Hardhat-based template for developing Fully Homomorphic Encryption (FHE) enabled Solidity smart contracts using the
+FHEVM protocol by Zama. The goal fo the project is a Confidential Vote application and its thorough testing. 
+Follow the instructions below to install dependencies, run the tests and deploy the smart contract to a local network.
 
 ## Quick Start
 
@@ -21,16 +22,10 @@ For detailed instructions see:
    npm install
    ```
 
-2. **Set up environment variables**
+2. **Install Mocha**
 
    ```bash
-   npx hardhat vars set MNEMONIC
-
-   # Set your Infura API key for network access
-   npx hardhat vars set INFURA_API_KEY
-
-   # Optional: Set Etherscan API key for contract verification
-   npx hardhat vars set ETHERSCAN_API_KEY
+   npm install --save-dev typescript ts-node @types/node @types/mocha
    ```
 
 3. **Compile and test**
@@ -49,33 +44,19 @@ For detailed instructions see:
    npx hardhat deploy --network localhost
    ```
 
-5. **Deploy to Sepolia Testnet**
-
-   ```bash
-   # Deploy to Sepolia
-   npx hardhat deploy --network sepolia
-   # Verify contract on Etherscan
-   npx hardhat verify --network sepolia <CONTRACT_ADDRESS>
-   ```
-
-6. **Test on Sepolia Testnet**
-
-   ```bash
-   # Once deployed, you can run a simple test on Sepolia.
-   npx hardhat test --network sepolia
-   ```
-
 ## 📁 Project Structure
 
 ```
 fhevm-hardhat-template/
-├── contracts/           # Smart contract source files
-│   └── FHECounter.sol   # Example FHE counter contract
-├── deploy/              # Deployment scripts
-├── tasks/               # Hardhat custom tasks
-├── test/                # Test files
-├── hardhat.config.ts    # Hardhat configuration
-└── package.json         # Dependencies and scripts
+├── contracts/                    # Smart contract source files
+│   └── FHEConfidentialVote.sol   # FHE Confidential Vote smart contract
+├── deploy/                       # Deployment scripts
+├── tasks/                        # Hardhat custom tasks
+├── test/                         # Test files
+│   └── e2e                       # End to end tests
+│   └── integration               # Integration tests                    
+├── hardhat.config.ts             # Hardhat configuration
+└── package.json                  # Dependencies and scripts
 ```
 
 ## 📜 Available Scripts
