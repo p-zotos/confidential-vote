@@ -36,6 +36,8 @@ const config: HardhatUserConfig = {
     hardhat: {
       accounts: {
         mnemonic: MNEMONIC,
+        path: "m/44'/60'/0'/0/",
+        count: 20,
       },
       chainId: 31337,
     },
