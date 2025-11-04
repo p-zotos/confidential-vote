@@ -49,11 +49,7 @@ export async function deployFixture() {
 // -----------------------------
 // Proposal encryption and decryption helpers
 // -----------------------------
-export async function encryptProposalId(
-  proposalId: number,
-  voter: HardhatEthersSigner,
-  contractAddress: string,
-) {
+export async function encryptProposalId(proposalId: number, voter: HardhatEthersSigner, contractAddress: string) {
   return fhevm.createEncryptedInput(contractAddress, voter.address).add32(proposalId).encrypt();
 }
 

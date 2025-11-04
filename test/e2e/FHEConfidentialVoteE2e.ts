@@ -143,7 +143,7 @@ describe("FHEConfidentialVote E2E Tests", function () {
 
       expect(winnerId).to.eq(Proposal.ProposalB);
 
-      for (let voter of votersArray) {
+      for (const voter of votersArray) {
         const encryptedRemainingVotes = await contract.getEncryptedRemainingVotes(voter.address);
         const remainingVotes = await decryptEuint32(encryptedRemainingVotes, signers.owner, contractAddress);
         expect(remainingVotes).to.eq(0);

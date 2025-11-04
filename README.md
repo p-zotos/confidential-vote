@@ -1,8 +1,9 @@
 # FHEVM Hardhat Template
 
-This projects is built by using the Hardhat-based template for developing Fully Homomorphic Encryption (FHE) enabled Solidity smart contracts using the
-FHEVM protocol by Zama. The goal fo the project is a Confidential Vote application and its thorough testing. 
-Follow the instructions below to install dependencies, run the tests and deploy the smart contract to a local network.
+This projects is built by using the Hardhat-based template for developing Fully Homomorphic Encryption (FHE) enabled
+Solidity smart contracts using the FHEVM protocol by Zama. The goal fo the project is a Confidential Vote application
+and its thorough testing. Follow the instructions below to install dependencies, run the tests and deploy the smart
+contract to a local network.
 
 ## Quick Start
 
@@ -54,7 +55,7 @@ fhevm-hardhat-template/
 ├── tasks/                        # Hardhat custom tasks
 ├── test/                         # Test files
 │   └── e2e                       # End to end tests
-│   └── integration               # Integration tests                    
+│   └── integration               # Integration tests
 ├── hardhat.config.ts             # Hardhat configuration
 └── package.json                  # Dependencies and scripts
 ```
